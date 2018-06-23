@@ -66,5 +66,7 @@ function Select-SQLView {
 	Invoke-SQLQuery -SqlInstance $ServerName -DatabaseName $DatabaseName -Query $Query
 }
 
-Export-ModuleMember Select-SQLView
-Set-Alias sq Select-SQLView 
+Set-Alias -Name sq -Value Select-SQLView 
+
+Export-ModuleMember -Function Select-SQLView -Alias sq
+
