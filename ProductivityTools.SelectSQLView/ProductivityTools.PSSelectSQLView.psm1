@@ -1,5 +1,6 @@
 $SelectSqlViewDatabaseNameKey="SelectSqlViewDatabaseName"
 $SelectSqlViewServerNameKey="SelectSqlViewServerNameKey"
+$SelectSqlViewApplicationName="Select-SQLView"
 
 function GetDataBaseName()
 {
@@ -14,7 +15,7 @@ function GetDataBaseName()
 	}
 	else
 	{
-		Set-MasterConfiguration -Key $SelectSqlViewDatabaseNameKey -Value $DatabaseName -Application "ProductivityTools.PSSelectSQLView"
+		Set-MasterConfiguration -Key $SelectSqlViewDatabaseNameKey -Value $DatabaseName -Application $SelectSqlViewApplicationName
 		Write-Verbose "Set DatabaseName in Configuration using $SelectSqlViewDatabaseNameKey, DatabaseName:$DatabaseName"
 	}
 
@@ -40,7 +41,7 @@ function GetServerName
 	}
 	else
 	{
-		Set-MasterConfiguration -Key $SelectSqlViewServerNameKey -Value $ServerName -Application "ProductivityTools.PSSelectSQLView"
+		Set-MasterConfiguration -Key $SelectSqlViewServerNameKey -Value $ServerName -Application $SelectSqlViewApplicationName
 		Write-Verbose "Set ServerName in Configuration using $SelectSqlViewServerNameKey, ServerName: $ServerName"
 	}
 
