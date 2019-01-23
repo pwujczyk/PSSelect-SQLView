@@ -1,4 +1,4 @@
-$SelectSqlViewDatabaseNameKey="SelectSqlVeiwDatabaseName"
+$SelectSqlViewDatabaseNameKey="SelectSqlViewDatabaseName"
 $SelectSqlViewServerNameKey="SelectSqlViewServerNameKey"
 
 function GetDataBaseName()
@@ -9,12 +9,12 @@ function GetDataBaseName()
 	if($DatabaseName -eq $null -or $DatabaseName -eq "")
 	{
 		Write-Verbose "Get DatabaseName from Configuration using $SelectSqlViewDatabaseNameKey"
-		$DatabaseName=Get-Configuration -Key $SelectSqlViewDatabaseNameKey
+		$DatabaseName=Get-MasterConfiguration -Key $SelectSqlViewDatabaseNameKey
 		Write-Verbose "DatabaseName from Configuration: $DatabaseName"
 	}
 	else
 	{
-		Set-Configuration -Key $SelectSqlViewDatabaseNameKey -Value $DatabaseName
+		Set-MasterConfiguration -Key $SelectSqlViewDatabaseNameKey -Value $DatabaseName -Application "ProductivityTools.PSSelectSQLView"
 		Write-Verbose "Set DatabaseName in Configuration using $SelectSqlViewDatabaseNameKey, DatabaseName:$DatabaseName"
 	}
 
@@ -35,12 +35,12 @@ function GetServerName
 	if($ServerName -eq $null -or $ServerName -eq "")
 	{
 		Write-Verbose "Get ServerName from Configuration using $SelectSqlViewServerNameKey"
-		$ServerName=Get-Configuration -Key $SelectSqlViewServerNameKey
+		$ServerName=Get-MasterConfiguration -Key $SelectSqlViewServerNameKey
 		Write-Verbose "ServerName from Configuration: $ServerName"
 	}
 	else
 	{
-		Set-Configuration -Key $SelectSqlViewServerNameKey -Value $ServerName
+		Set-MasterConfiguration -Key $SelectSqlViewServerNameKey -Value $ServerName -Application "ProductivityTools.PSSelectSQLView"
 		Write-Verbose "Set ServerName in Configuration using $SelectSqlViewServerNameKey, ServerName: $ServerName"
 	}
 

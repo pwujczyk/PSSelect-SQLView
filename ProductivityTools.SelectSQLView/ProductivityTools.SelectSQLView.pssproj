@@ -28,9 +28,8 @@
   <ItemGroup />
   <ItemGroup>
     <Compile Include="Runner.ps1" />
-    <Compile Include="Select-SQLView.psd1" />
-    <Compile Include="Select-SQLView.psm1" />
-    <Compile Include="Select-SQLView.tests.ps1" />
+    <Compile Include="ProductivityTools.SelectSQLView.psd1" />
+    <Compile Include="ProductivityTools.SelectSQLView.psm1" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="Build" />
