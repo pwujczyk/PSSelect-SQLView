@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/39599672/how-to-query-sql-server-using-powershell/51004541#51004541
