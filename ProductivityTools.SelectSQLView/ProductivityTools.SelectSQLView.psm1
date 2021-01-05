@@ -13,11 +13,6 @@ function GetDataBaseName()
 		$DatabaseName=Get-MasterConfiguration -Key $SelectSqlViewDatabaseNameKey
 		Write-Verbose "DatabaseName from Configuration: $DatabaseName"
 	}
-	else
-	{
-		Set-MasterConfiguration -Key $SelectSqlViewDatabaseNameKey -Value $DatabaseName -Application $SelectSqlViewApplicationName
-		Write-Verbose "Set DatabaseName in Configuration using $SelectSqlViewDatabaseNameKey, DatabaseName:$DatabaseName"
-	}
 
 	if($DatabaseName -eq $null -or $DatabaseName -eq "")
 	{
@@ -38,11 +33,6 @@ function GetServerName
 		Write-Verbose "Get ServerName from Configuration using $SelectSqlViewServerNameKey"
 		$ServerName=Get-MasterConfiguration -Key $SelectSqlViewServerNameKey
 		Write-Verbose "ServerName from Configuration: $ServerName"
-	}
-	else
-	{
-		Set-MasterConfiguration -Key $SelectSqlViewServerNameKey -Value $ServerName -Application $SelectSqlViewApplicationName
-		Write-Verbose "Set ServerName in Configuration using $SelectSqlViewServerNameKey, ServerName: $ServerName"
 	}
 
 	if($ServerName -eq $null -or $ServerName -eq "")

@@ -1,23 +1,28 @@
-<p align="right">
- <a href="https://www.powershellgallery.com/packages/ProductivityTools.PSSelectSQLView/">
-  <img src="http://cdn.productivitytools.tech/Powershell40px.png" /></a>
-<a href="http://www.productivitytools.tech/select-sqlview/">
-<img src="http://cdn.productivitytools.tech/Blog40px.png" /><a>
+<!--Category:Powershell,SQL--> 
+ <p align="right">
+    <a href="https://www.powershellgallery.com/packages/ProductivityTools.PSSelectSQLView/"><img src="Images/Header/Powershell_border_40px.png" /></a>
+    <a href="http://productivitytools.tech/select-sqlview/"><img src="Images/Header/ProductivityTools_green_40px_2.png" /><a> 
+    <a href="https://github.com/pwujczyk/ProductivityTools.PSSelectSQLView"><img src="Images/Header/Github_border_40px.png" /></a>
+</p>
+<p align="center">
+    <a href="http://productivitytools.tech/">
+        <img src="Images/Header/LogoTitle_green_500px.png" />
+    </a>
 </p>
 
 
+
 # ProductivityTools.PSSelectSQLView
-It allows to quickly select view or table from SQL Server. It saves database and server name in configuration so the shortest way of using it is Select-SQLView tableName
-
-
-When first used you need to provide database name and server name.
+It allows to quickly select view or table from SQL Server. 
 
 ```powershell
-Select-SQLView -Name me.raport -DatabaseName PawelDT -ServerName .\sql2017
+Select-SQLView -Name me.raport -DatabaseName PawelDT -ServerName .\sql2019
 ```
 
-After first invocation database and server name will be stored in the configuration and next time you can call method with providing just table or view name.
+You could save your server name and database name in the MasterConfiguration so it won't be needed to pass them later.
+
+![MasterConfiguration](Images/Configuration.png)
 
 ```powershell
-Select-SQLView me.raport3
+Select-SQLView me.raport
 ```
