@@ -16,13 +16,19 @@
 It allows to quickly select view or table from SQL Server. 
 
 ```powershell
-Select-SQLView -Name me.raport -DatabaseName PawelDT -ServerName .\sql2019
+Select-SQLView -Name "[misc].[Movies]" -DatabaseName PawelDT -ServerName .\sql2019
 ```
+
+![MasterConfiguration](Images/Powershell.png)
+
+The same data as above in SQL
+
+![MasterConfiguration](Images/SQL.png)
 
 You could save your server name and database name in the MasterConfiguration so it won't be needed to pass them later.
 
 ![MasterConfiguration](Images/Configuration.png)
 
 ```powershell
-Select-SQLView me.raport
+Select-SQLView -Name "[misc].[Movies]"
 ```
