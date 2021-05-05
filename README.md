@@ -1,8 +1,8 @@
 <!--Category:Powershell,SQL--> 
  <p align="right">
-    <a href="https://www.powershellgallery.com/packages/ProductivityTools.PSSelectSQLView/"><img src="Images/Header/Powershell_border_40px.png" /></a>
-    <a href="http://productivitytools.tech/select-sqlview/"><img src="Images/Header/ProductivityTools_green_40px_2.png" /><a> 
-    <a href="https://github.com/pwujczyk/ProductivityTools.PSSelectSQLView"><img src="Images/Header/Github_border_40px.png" /></a>
+    <a href="https://www.powershellgallery.com/packages/ProductivityTools.SelectSQLView/"><img src="Images/Header/Powershell_border_40px.png" /></a>
+    <a href="http://productivitytools.tech/select-sql-view/"><img src="Images/Header/ProductivityTools_green_40px_2.png" /><a> 
+    <a href="https://github.com/pwujczyk/ProductivityTools.SelectSQLView"><img src="Images/Header/Github_border_40px.png" /></a>
 </p>
 <p align="center">
     <a href="http://productivitytools.tech/">
@@ -15,7 +15,7 @@
 # Select SQL View
 It allows to quickly select view or table from SQL Server. 
 
-```powershell
+```PowerShell
 Select-SQLView -Name "[misc].[Movies]" -DatabaseName PawelDT -ServerName .\sql2019
 ```
 
@@ -29,17 +29,21 @@ You could save your server name and database name in the MasterConfiguration so 
 
 ![MasterConfiguration](Images/Configuration.png)
 
-```powershell
+```PowerShell
 Select-SQLView -Name "[misc].[Movies]"
 ```
 
-Module allows also to add where and order by with **suffix** keyword.
+The module allows also to add where and order by with **suffix** keyword.
+
+```PowerShell
+sq "me.raport" -Suffix 'where expenseid=1889' -Verbose
+```
 
 ![MasterConfiguration](Images/Where.png)
 
 ### Alias SQ
 Module imports also alias sq.
 
-```powershell
+```PowerShell
 sq "[misc].[Movies]"
 ```
