@@ -14,11 +14,11 @@
 
 # Select SQL View
 It allows to quickly select view or table from SQL Server. 
-
+<!--more-->
 ```PowerShell
 Select-SQLView -Name "[misc].[Movies]" -DatabaseName PawelDT -ServerName .\sql2019
 ```
-
+<!--og-image-->
 ![MasterConfiguration](Images/Powershell.png)
 
 The same data as above in SQL
