@@ -12,7 +12,7 @@
 
 
 
-# ProductivityTools.PSSelectSQLView
+# Select SQL View
 It allows to quickly select view or table from SQL Server. 
 
 ```powershell
@@ -31,4 +31,15 @@ You could save your server name and database name in the MasterConfiguration so 
 
 ```powershell
 Select-SQLView -Name "[misc].[Movies]"
+```
+
+Module allows also to add where and order by with **suffix** keyword.
+
+![MasterConfiguration](Images/Where.png)
+
+### Alias SQ
+Module imports also alias sq.
+
+```powershell
+sq "[misc].[Movies]"
 ```
