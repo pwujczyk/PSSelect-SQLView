@@ -58,6 +58,5 @@ function Select-SQLView {
 }
 
 Set-Alias -Name sq -Value Select-SQLView 
-
 Export-ModuleMember -Function Select-SQLView -Alias sq
 
